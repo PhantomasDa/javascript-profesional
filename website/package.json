@@ -11,6 +11,7 @@
     "start": "live-server"
   },
   "devDependencies": {
+    "live-server": "^1.2.1",
     "parcel-bundler": "^1.12.3",
     "typescript": "^3.5.3"
   },
@@ -18,7 +19,6 @@
     "last 1 Chrome version"
   ],
   "dependencies": {
-    "@sparragus/platzimediaplayer": "^1.0.0",
-    "live-server": "^1.2.1"
+    "@sparragus/platzimediaplayer": "^1.0.0"
   }
 }

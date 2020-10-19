@@ -11,11 +11,21 @@
 
     <script>
       // Global Scope
-      // var message = 'Hello, Platzi!';
-      // var $ = function(message) {
-      //   console.log('Say: ' + message);
+      // var message = "hola, platzi";
+      // // var message = 'Hello, Platzi!';
+      //  var $ = function(message) {
+      // console.log('Say: ' + message);
       // };
 
+      // function printNumbers(){
+      //   var i;
+      //   for( i = 0; i < 10; i++){
+      //     function eventuallyPrintNumber(n){setTimeout(function (){
+      //       console.log(n);
+      //     }, 100)}
+      //     eventuallyPrintNumber(i)
+      //   }
+      // }
       // Function Scope
       // function printNumbers() {
       //   var i;
@@ -33,16 +43,14 @@
       // printNumbers();
 
       // Block Scope
-      function printNumbers2() {
-        for (let i = 0; i < 10; i++) {
-          setTimeout(function() {
-            console.log(i);
-          }, 100);
-        }
-      }
-
-      printNumbers2();
-
+       function printNumbers2() {
+       for (let i = 0; i < 10; i++) {
+        setTimeout(function() {
+         console.log(i);
+        }, 100);
+       }
+     }
+      // printNumbers2();
       // Module Scope
     </script>
   </body>

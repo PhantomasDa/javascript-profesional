@@ -10,10 +10,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "live-server": "^1.2.1",
     "typescript": "^3.5.3"
   },
   "description": "",
-  "dependencies": {
-    "live-server": "^1.2.1"
-  }
+  "dependencies": {}
 }

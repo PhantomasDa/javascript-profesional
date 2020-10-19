@@ -1,24 +1,19 @@
+import MediaPlayer from './MediaPlayer.js';
+import AutoPlay from './plugins/AutoPlay.js';
 
-    const video = document.querySelector('video');
-    const button = document.querySelector('button');
-    
-    function MediaPlayer(config){
-      this.media = config.el
-    }
+const video = document.querySelector('video');
+const player = new MediaPlayer({ el: video, plugins: [
+  // new AutoPlay()
+] });
 
-    MediaPlayer.prototype.play = function(){
-      this.media.play();
-    }
-    MediaPlayer.prototype.pause = function(){
-      this.media.pause();
-    }
-    const player = new MediaPlayer({el: video});
-    // reto de la clase pausar y activar
-    //onclikc me permite ver cuando se active el boton y con eso ejecuto una funcion que vea si el boton es presionado y esta pausado retorne play y si esta en play retorne pause
-    button.onclick = () => { 
-      if(video.paused){
-        player.play();
-      }else if (video.played){
-        player.pause();
-      }
-    };
+const playButton = document.querySelector('#playButton');
+playButton.onclick = () => player.togglePlay();
+
+const muteButton = document.querySelector('#muteButton');
+muteButton.onclick = () => {
+  if (player.media.muted) {
+    player.unmute();
+  } else {
+    player.mute();
+  }
+};
