@@ -21,23 +21,23 @@
         console.log(`Hola. Soy ${this.name} ${this.apellido}`);
       }
 
-      const richard = {
-        name: 'Richard',
-        apellido: 'Kaufman López',
+      const Christian = {
+        name: 'christian',
+        apellido: 'Rios Mock',
       };
 
-      saludar.call(richard);
+      saludar.call(Christian);
 
       // Establece `this` usando `call` y pasar argumentos a la función
       function caminar(metros, direccion) {
         console.log(`${this.name} camina ${metros} metros hacia ${direccion}.`);
       }
 
-      caminar.call(richard, 400, 'norte');
+      caminar.call(Christian, 500, 'sur');
 
       // Establece `this` usando `apply` y pasar argumentos a la función
       const valores = [800, 'noreste'];
-      caminar.apply(richard, valores);
+      caminar.apply(Christian, valores);
 
       /*
         Call - comma
